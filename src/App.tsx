@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layouts from "./layout/Layouts";
 import Hero from "./components/Hero";
+
+
 const App = () => {
   const appRouter = createBrowserRouter([
     {
@@ -13,8 +15,8 @@ const App = () => {
         },
       ],
       // {
-      //   path: "/login",
       //   element: <Login />,
+      //   path: "/login",
       // },
     },
   ]);
