@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import Navitems from "./Navitems";
-import { AlignRight, Search } from "lucide-react";
+import { AlignRight, PhoneCall, Search } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className=" pl-3 border-b-2">
+    <div className="px-3 border-b-2 z-50">
       <div className="flex items-center justify-between h-14">
+        {/* Logo */}
         <div>
           <Link to="/">
             <h1 className="font-bold md:font-extrabold text-2xl">
@@ -13,16 +14,26 @@ const Navbar = () => {
             </h1>
           </Link>
         </div>
-        <div className="md:flex items-center gap-0">
-          <Navitems />
 
-          <div className="border-x-2 p-4 cursor-pointer">
+        {/* Navigation and Search */}
+        <div className="flex items-center gap-0">
+          {/* Navitems will be visible only on medium screens and above */}
+          <div className="hidden md:flex items-center gap-0">
+            <Navitems />
+          </div>
+          <div className="border-x-2 p-4 mx-3 cursor-pointer">
             <Search size={19} />
           </div>
 
-          <div className="flex items-center gap-1 py-4 px-2 cursor-pointer bg-blue-500">
+          {/* Menu Icon (mobile) */}
+          <div className="md:hidden flex w-10 h-10 items-center gap-1 py-4 px-2 rounded-md cursor-pointer bg-slate-400">
             <AlignRight size={19} />
-            <h2>Menus</h2>
+          </div>
+
+          {/* call Icon (big screen)*/}
+          <div className="hidden md:flex h-10 items-center gap-1 py-4 px-2 rounded-xl cursor-pointer bg-">
+            <PhoneCall size={19} />
+            <p>Call Now</p>
           </div>
         </div>
       </div>

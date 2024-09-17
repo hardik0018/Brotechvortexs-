@@ -68,6 +68,14 @@ const Navitems = () => {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+        {/* about */}
+        <NavigationMenuItem className="bg-white rounded-md">
+          <Link to="/">
+            <NavigationMenuLink className="block px-4 py-2 hover:bg-slate-200 rounded-md">
+              About
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
