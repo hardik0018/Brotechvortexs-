@@ -1,6 +1,6 @@
 import { CircleArrowRight, Hammer, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import "./ex.css";
 type Block = {
   src: String;
   title: String;
@@ -10,73 +10,76 @@ type Block = {
 
 const Expertise = () => {
   return (
-    <div className="bg-gray-200 overflow-hidden">
-      <div className="w-full text-center pt-20">
-        <div className="flex items-center justify-center text-[#f86c35]">
-          <Hammer size={30} strokeWidth={2} />
+    <>
+      <div className="bg-gray-200 overflow-hidden">
+        <div className="w-full text-center pt-20">
+          <div className="flex items-center justify-center text-[#f86c35]">
+            <Hammer size={30} strokeWidth={2} />
+          </div>
+          <div>
+            <h2 className="font-bold text-[44px] my-2">Our Best Expertise</h2>
+            <p className="w-[35%] mx-auto">
+              Velit nulla, nisl laboriosam ea ea saepe integer, varius, elit
+              dapibus. Nostrum quibusdam dolorem. Orci donec proident porttitor.
+            </p>
+          </div>
+          <div className=" flex flex-col gap-y-20 items-center xl:grid xl:grid-cols-2 lg:mx-10 xl:mx-20 my-20 lg:gap-10 xl:gap-16 mx-4">
+            <Block
+              src={
+                "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/bearded-handyman-lying-on-floor-near-toolbox-in-bathroom.jpg"
+              }
+              title={"Plumbing Services"}
+              desc={
+                "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
+              }
+              link={"/"}
+            />
+            <Block
+              src={
+                "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/electrician-changes-the-light-bulb-handyman.jpg"
+              }
+              title={"Home Electrical"}
+              desc={
+                "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
+              }
+              link={"/"}
+            />
+            <Block
+              src={
+                "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/construction-worker-planing-wood-with-electric-planer.jpg"
+              }
+              title={"Carpentry Expertise"}
+              desc={
+                "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
+              }
+              link={"/"}
+            />
+            <Block
+              src={
+                "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/construction-industry-concept.jpg"
+              }
+              title={"Painting & Flooring"}
+              desc={
+                "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
+              }
+              link={"/"}
+            />
+          </div>
         </div>
-        <div>
-          <h2 className="font-bold text-[44px] my-2">Our Best Expertise</h2>
-          <p className="w-[35%] mx-auto">
-            Velit nulla, nisl laboriosam ea ea saepe integer, varius, elit
-            dapibus. Nostrum quibusdam dolorem. Orci donec proident porttitor.
-          </p>
-        </div>
-        <div className=" flex flex-col gap-y-20 items-center xl:grid xl:grid-cols-2 lg:mx-10 xl:mx-20 my-20 lg:gap-10 xl:gap-16 mx-4">
-          <Block
-            src={
-              "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/bearded-handyman-lying-on-floor-near-toolbox-in-bathroom.jpg"
-            }
-            title={"Plumbing Services"}
-            desc={
-              "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
-            }
-            link={"/"}
-          />
-          <Block
-            src={
-              "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/electrician-changes-the-light-bulb-handyman.jpg"
-            }
-            title={"Home Electrical"}
-            desc={
-              "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
-            }
-            link={"/"}
-          />
-          <Block
-            src={
-              "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/construction-worker-planing-wood-with-electric-planer.jpg"
-            }
-            title={"Carpentry Expertise"}
-            desc={
-              "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
-            }
-            link={"/"}
-          />
-          <Block
-            src={
-              "https://demo.xperthemes.com/handon/wp-content/uploads/sites/11/2024/07/construction-industry-concept.jpg"
-            }
-            title={"Painting & Flooring"}
-            desc={
-              "Gravida commodi unde ipsam culpa occaecati impedit, nisl ea mollis pariatur natus."
-            }
-            link={"/"}
-          />
+        <div className="flex justify-center w-full mb-20">
+          <div className="border-2 font-semibold border-dashed border-gray-400 w-fit rounded-full px-10 py-2 flex items-center gap-x-8 text-xl">
+            Call us for schedule :
+            <span className="flex items-center justify-center text-2xl text-[#f86c35] hover:text-red-900 transition duration-200 cursor-pointer gap-4">
+              <Phone /> 91+ 9090909090
+            </span>
+            <button className="px-12 uppercase py-4 text-white font-semibold  bg-[#f86c35] hover:bg-red-900 transition duration-200 rounded-sm">
+              More Service
+            </button>
+          </div>
         </div>
       </div>
-      <div className="flex justify-center w-full mb-20">
-        <div className="border-2 font-semibold border-dashed border-gray-400 w-fit rounded-full px-10 py-2 flex items-center gap-x-8 text-xl">
-          Call us for schedule :
-          <span className="flex items-center justify-center text-2xl text-[#f86c35] hover:text-red-900 transition duration-200 cursor-pointer gap-4">
-            <Phone /> 91+ 9090909090
-          </span>
-          <button className="px-12 uppercase py-4 text-white font-semibold  bg-[#f86c35] hover:bg-red-900 transition duration-200 rounded-sm">
-            More Service
-          </button>
-        </div>
-      </div>
-    </div>
+      <div className="borderr">dsdfsfsdfsdfhjk</div>
+    </>
   );
 };
 
