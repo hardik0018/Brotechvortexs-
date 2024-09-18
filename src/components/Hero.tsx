@@ -1,4 +1,4 @@
-mport { AudioWaveform, Earth, PlayCircle } from "lucide-react";
+import { AudioWaveform, Earth, PlayCircle } from "lucide-react";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 
