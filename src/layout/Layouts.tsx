@@ -2,25 +2,24 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const MainLayout = () => {
+const Mainlayout = () => {
   return (
-    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+    <div className="flex flex-col min-h-screen m-0">
       {/* Navbar */}
-      <header className="w-full">
+      <header>
         <Navbar />
       </header>
-
-      {/* Main content area */}
-      <main className="flex-1 w-full">
+      {/* main screen */}
+      <div className="flex-1">
         <Outlet />
-      </main>
+      </div>
 
-      {/* Footer */}
-      <footer className="w-full">
+      {/* footer */}
+      <footer>
         <Footer />
       </footer>
     </div>
   );
 };
 
-export default MainLayout;
+export default Mainlayout;
